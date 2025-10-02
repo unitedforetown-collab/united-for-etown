@@ -1,4 +1,6 @@
-
+/* =========================================================
+   1) Theme tokens
+========================================================= */
 :root{
   --primary: #4820FA;
   --accent: #FA8020;
@@ -12,340 +14,183 @@
   --bg-alt: #f7f7fb;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);}
-a{color:var(--primary);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 1rem}
-
-.header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid #e5e7eb}
-.nav{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.75rem 0}
-.brand{display:flex;align-items:center;gap:.75rem}
-.brand img{height:44px;width:auto}
-.brand-title{font-weight:800;letter-spacing:.5px}
-
-.menu{
-  display:flex;gap:1rem;flex-wrap:wrap;align-items:center
+/* =========================================================
+   2) Base / reset
+========================================================= */
+*{ box-sizing: border-box; }
+html,body{
+  margin:0; padding:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+  color: var(--ink); background: var(--bg);
 }
-.menu a{padding:.5rem .75rem;border-radius:999px}
-.menu a.cta{background:var(--primary);color:#fff}
-.menu a.cta.secondary{background:var(--accent)}
+a{ color: var(--primary); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+.container{ max-width:1100px; margin:0 auto; padding:0 1rem; }
+.img-fluid{ max-width:100%; height:auto; border-radius:12px; }
+.small{ font-size:.95rem; }
+.badge{
+  display:inline-block; padding:.2rem .5rem; border-radius:999px;
+  background:var(--bg-alt); border:1px solid #e5e7eb; font-size:.8rem; color:#333;
+}
+blockquote{
+  margin:0; padding:.75rem 1rem; border-left:4px solid var(--accent);
+  background:#fff8f2; border-radius:8px;
+}
+ul.inline{ list-style:none; padding:0; margin:0; display:flex; gap:.5rem; flex-wrap:wrap; }
+ul.inline li{ background:var(--bg-alt); border:1px solid #e5e7eb; padding:.35rem .6rem; border-radius:999px; }
 
+/* =========================================================
+   3) Header / nav
+========================================================= */
+.header{ position:sticky; top:0; z-index:30; background:#fff; border-bottom:1px solid #e5e7eb; }
+.nav{ display:flex; align-items:center; gap:1rem; justify-content:space-between; padding:.75rem 0; }
+.brand{ display:flex; align-items:center; gap:.75rem; }
+.brand img{ height:44px; width:auto; }
+/* Lock header logo size */
+.header .brand img{ width:48px; height:auto; max-width:none; }
+.brand-title{ font-weight:800; letter-spacing:.5px; }
+
+.menu{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+.menu a{ padding:.5rem .75rem; border-radius:999px; }
+.menu a[aria-current="page"]{ text-decoration: underline; }
+.menu a.cta{ background:var(--primary); color:#fff; }
+.menu a.cta.secondary{ background:var(--accent); }
+
+/* =========================================================
+   4) Hero
+========================================================= */
 .hero{
   background:linear-gradient(135deg, color-mix(in oklab, var(--primary) 18%, #fff), #fff);
   padding:3.5rem 0 2.5rem;
   border-bottom:1px solid #e5e7eb;
 }
-.hero h1{font-size:clamp(2rem,4vw,3rem);margin:.25rem 0 0}
-.hero p{font-size:1.125rem;color:var(--muted)}
-.hero .actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
-.btn{display:inline-block;padding:.7rem 1rem;border-radius:12px;font-weight:700;border:2px solid transparent}
-.btn.primary{background:var(--primary);color:#fff}
-.btn.accent{background:var(--accent);color:#000}
-.btn.ghost{border-color:var(--primary);color:var(--primary);background:transparent}
+.hero h1{ font-size:clamp(2rem,4vw,3rem); margin:.25rem 0 0; }
+.hero p{ font-size:1.125rem; color:var(--muted); }
+.hero .actions{ display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+/* Subpage hero variant */
+.hero--sub{ border-bottom:0; padding-top:2.5rem; }
 
-.grid{display:grid;gap:1rem}
-.grid.cols-3{grid-template-columns:repeat(3,1fr)}
-.grid.cols-2{grid-template-columns:repeat(2,1fr)}
-@media (max-width:900px){
-  .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
-}
-
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1rem;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-.card h3{margin:.3rem 0}
-.stat-band{background:var(--bg-alt);padding:1.25rem 0;border-top:1px solid #eee;border-bottom:1px solid #eee}
-.stat{text-align:center}
-.stat .num{font-size:2rem;font-weight:800;color:var(--primary)}
-.stat .label{color:var(--muted)}
-
-.section{padding:2rem 0}
-.section h2{font-size:1.75rem;margin:.2rem 0 1rem}
-
-.footer{background:#0b0d1a;color:#c9d1e6;padding:1.5rem 0;margin-top:2rem}
-.footer a{color:#c9d1e6;opacity:.9}
-.small{font-size:.95rem}
-.img-fluid{max-width:100%;height:auto;border-radius:12px}
-.badge{display:inline-block;padding:.2rem .5rem;border-radius:999px;background:var(--bg-alt);border:1px solid #e5e7eb;font-size:.8rem;color:#333}
-
-blockquote{margin:0;padding:.75rem 1rem;border-left:4px solid var(--accent);background:#fff8f2;border-radius:8px}
-ul.inline{list-style:none;padding:0;margin:0;display:flex;gap:.5rem;flex-wrap:wrap}
-ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6rem;border-radius:999px}
-
-/* Lock the header logo size */
-.header .brand img {
-  width: 48px;
-  height: auto;    /* preserves aspect */
-  max-width: none; /* ignore any global img rules */
-}
-
-/* Scope responsive images ONLY to hero & content, not header */
+/* Scope responsive images to content areas (not header logo) */
 .hero .hero-media img,
 .section img,
-.stat-band img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.stat-band img{
+  max-width:100%; height:auto; display:block;
 }
 
-/* Remove the global version if you added it earlier */
-.img-fluid { /* optional: keep for specific images you tag */
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* =========================================================
+   5) Layout utilities
+========================================================= */
+.grid{ display:grid; gap:1rem; }
+.grid.cols-3{ grid-template-columns:repeat(3,1fr); }
+.grid.cols-2{ grid-template-columns:repeat(2,1fr); }
+.section{ padding:2rem 0; }
+.section h2{ font-size:1.75rem; margin:.2rem 0 1rem; }
+.lead{ font-size:1.125rem; color:var(--muted); }
+
+/* Buttons */
+.btn{ display:inline-block; padding:.7rem 1rem; border-radius:12px; font-weight:700; border:2px solid transparent; }
+.btn.primary{ background:var(--primary); color:#fff; }
+.btn.accent{ background:var(--accent); color:#000; }
+.btn.ghost{ border-color:var(--primary); color:var(--primary); background:transparent; }
+
+/* Cards / Stats */
+.card{
+  background:#fff; border:1px solid #e5e7eb; border-radius:16px;
+  padding:1rem; box-shadow:0 1px 0 rgba(0,0,0,.03);
 }
-/* Candidates page polish */
-.candidates .grid { gap: 2rem; }
+.card h3{ margin:.3rem 0; }
 
-.candidates .card {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+.stat-band{
+  background:var(--bg-alt); padding:1.25rem 0;
+  border-top:1px solid #eee; border-bottom:1px solid #eee;
+}
+.stat{ text-align:center; }
+.stat .num{ font-size:2rem; font-weight:800; color:var(--primary); }
+.stat .label{ color:var(--muted); }
+
+/* Footer */
+.footer{ background:#0b0d1a; color:#c9d1e6; padding:1.5rem 0; margin-top:2rem; }
+.footer a{ color:#c9d1e6; opacity:.9; }
+
+/* =========================================================
+   6) Page-specific: Candidates index
+========================================================= */
+.candidates .grid{ gap:2rem; }
+.candidates .card{ display:flex; flex-direction:column; padding:1rem; }
+.candidates .card p{ margin:.5rem 0; }
+.candidates .card a.btn{ margin-top:auto; }
+/* Square images with better headroom */
+.candidates .card img{
+  width:100%; aspect-ratio:1/1; object-fit:cover; object-position:50% 10%;
+  border-radius:.5rem; display:block;
+}
+/* Mobile: stack cards to single column on small screens */
+@media (max-width:768px){
+  .candidates .grid.cols-2{ grid-template-columns:1fr !important; }
 }
 
-/* Candidate cards — square images */
-.candidates .card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* makes a perfect square */
-  object-fit: cover;      /* fills the square, crops evenly */
-  border-radius: .5rem;
-  display: block;
-}
-
-.candidates .card h2 { margin: .5rem 0 0; }
-.candidates .card .small { color: #555; margin-bottom: .5rem; }
-
-.candidates .card p { margin: .5rem 0; }
-
-/* push the button to the bottom so cards are equal height */
-.candidates .card a.btn { margin-top: auto; }
-
-/* Mobile: stack neatly */
-@media (max-width: 768px) {
-  .candidates .grid.cols-2 { grid-template-columns: 1fr !important; }
-}
-/* Candidate images — square format across site */
-.candidates .card img,
-.corty .profile img,
-.kevin .profile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* force square */
-  object-fit: cover;      /* center crop */
-  border-radius: .5rem;
-  display: block;
-}
-/* Profile page layout: smaller image column */
+/* =========================================================
+   7) Page-specific: Candidate profiles (Corty / Kevin)
+========================================================= */
 .corty .grid.cols-2,
-.kevin .grid.cols-2 {
-  grid-template-columns: 280px 1fr;   /* narrow left, roomy right */
-  align-items: start;
-  gap: 2rem;
+.kevin .grid.cols-2{
+  grid-template-columns:280px 1fr;
+  align-items:start; gap:2rem;
 }
-
-/* Cap the image box */
-.corty .profile,
-.kevin .profile {
-  max-width: 280px;
-}
-
-/* Square, cropped, tidy */
+.corty .profile, .kevin .profile{ max-width:280px; }
 .corty .profile img,
-.kevin .profile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: .5rem;
-  display: block;
+.kevin .profile img{
+  width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:.5rem; display:block;
+}
+/* Fine-tuned focal point (adjust if you re-crop) */
+.corty .profile img{ object-position:50% 8%; }
+.kevin .profile img{ object-position:50% 8%; }
+
+/* Mobile stack for profiles */
+@media (max-width:768px){
+  .corty .grid.cols-2, .kevin .grid.cols-2{ grid-template-columns:1fr !important; }
+  .corty .profile, .kevin .profile{ margin:0 auto 1rem; }
 }
 
-/* Mobile: stack and center the image */
-@media (max-width: 768px) {
-  .corty .grid.cols-2,
-  .kevin .grid.cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-  .corty .profile,
-  .kevin .profile {
-    margin: 0 auto 1rem;
-  }
+/* =========================================================
+   8) Page-specific: About
+========================================================= */
+.about .about-aside ul{ margin:.5rem 0 0; padding-left:1.2rem; }
+.about .about-chips{ list-style:none; padding:0; display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 0; }
+.about .about-chips li{
+  background:var(--bg-alt); border:1px solid #e5e7eb;
+  padding:.35rem .6rem; border-radius:999px;
 }
-/* Corty profile page polish */
-.corty .grid.cols-2 {
-  grid-template-columns: 280px 1fr;  /* narrow image, wide text */
-  align-items: start;
-  gap: 2rem;
+.about details{
+  background:#fff; border:1px solid #e5e7eb; border-radius:8px;
+  padding:.6rem .8rem; margin:.5rem 0;
 }
+.about details summary{ cursor:pointer; font-weight:600; }
 
-.corty .profile {
-  max-width: 280px;
+/* =========================================================
+   9) Endorsements (logos)
+========================================================= */
+.endorsement-logos{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:2rem; margin-top:1.5rem;
 }
-
-.corty .profile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* square crop */
-  object-fit: cover;
-  border-radius: .5rem;
-  display: block;
+.endorsement img{
+  max-width:140px; height:auto; display:block;
+  filter:grayscale(100%); opacity:.9; transition:all .2s ease;
 }
-
-/* On small screens, stack image above text */
-@media (max-width: 768px) {
-  .corty .grid.cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-  .corty .profile {
-    margin: 0 auto 1rem;
-  }
-}
-/* Kevin profile page polish */
-.kevin .grid.cols-2 {
-  grid-template-columns: 280px 1fr;  /* narrow image column */
-  align-items: start;
-  gap: 2rem;
+.endorsement img:hover{ filter:none; opacity:1; }
+/* Optional text fallback when no logo */
+.endorsement-name{
+  display:inline-block; padding:.75rem 1rem; border:1px solid #e5e7eb;
+  border-radius:.5rem; background:var(--bg-alt); font-weight:600;
 }
 
-.kevin .profile {
-  max-width: 280px;
-}
-
-.kevin .profile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* square crop */
-  object-fit: cover;
-  border-radius: .5rem;
-  display: block;
-}
-
-/* On small screens, stack and center */
-@media (max-width: 768px) {
-  .kevin .grid.cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-  .kevin .profile {
-    margin: 0 auto 1rem;
-  }
-}
-.corty .profile img { object-position: 50% 8%; }   /* try 8% */
-.kevin .profile img { object-position: 50% 8%; }
-
-/* Candidates index: shift focal point up so heads aren't clipped */
-.candidates .card img { object-position: 50% 10%; }  /* try 10%; test 5–15% */
-
-/* About page polish (scoped) */
-.about .about-aside ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-.about .about-chips { list-style: none; padding: 0; display: flex; gap: .5rem; flex-wrap: wrap; margin: .5rem 0 0; }
-.about .about-chips li { background: var(--bg-alt); border: 1px solid #e5e7eb; padding: .35rem .6rem; border-radius: 999px; }
-.about details { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: .6rem .8rem; margin: .5rem 0; }
-.about details summary { cursor: pointer; font-weight: 600; }
-
-.endorsement-name {
-  display: inline-block;
-  padding: .75rem 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: .5rem;
-  background: var(--bg-alt);
-  font-weight: 600;
-}
-/* Endorsements logo layout */
-.endorsement-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* center even if 1–2 logos */
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.endorsement img {
-  max-width: 140px;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);  /* optional neutral look */
-  opacity: 0.9;
-  transition: all 0.2s ease;
-}
-
-.endorsement img:hover {
-  filter: none;
-  opacity: 1;
-}
-/* ---- NAV active link (optional, subtle) --------------------- */
-.menu a[aria-current="page"] { text-decoration: underline; }
-
-/* ---- Subpage hero tweak (prevents "double bar") ------------- */
-.hero--sub { border-bottom: 0; padding-top: 2.5rem; }
-
-/* ---- Candidate profile layout (single source of truth) ------ */
-.corty .grid.cols-2,
-.kevin .grid.cols-2 {
-  grid-template-columns: 280px 1fr;
-  align-items: start;
-  gap: 2rem;
-}
-.corty .profile,
-.kevin .profile { max-width: 280px; }
-
-.corty .profile img,
-.kevin .profile img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: .5rem;
-  display: block;
-}
-
-/* Fine-tune headroom per person (adjust if you re-crop later) */
-.corty .profile img { object-position: 50% 8%; }
-.kevin .profile img { object-position: 50% 8%; }
-
-/* Mobile stack */
-@media (max-width: 768px) {
-  .corty .grid.cols-2,
-  .kevin .grid.cols-2 { grid-template-columns: 1fr !important; }
-  .corty .profile,
-  .kevin .profile { margin: 0 auto 1rem; }
-}
-
-/* ---- Candidates index images (square + headroom) ------------ */
-.candidates .card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: 50% 10%;
-  border-radius: .5rem;
-  display: block;
-}
-
-/* ---- Endorsements (flex, centers with 1–2 logos) ------------ */
-.endorsement-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-.endorsement img {
-  max-width: 140px;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);
-  opacity: 0.9;
-  transition: all 0.2s ease;
-}
-.endorsement img:hover { filter: none; opacity: 1; }
-
-/* Optional text fallback when no logo file yet */
-.endorsement-name {
-  display: inline-block;
-  padding: .75rem 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: .5rem;
-  background: var(--bg-alt);
-  font-weight: 600;
-}
-
-.lead { font-size: 1.125rem; color: var(--muted); }
-.menu a[aria-current="page"] { text-decoration: underline; }
-
-/* Mobile header: stack nav neatly */
+/* =========================================================
+   10) Responsive (global)
+========================================================= */
+/* =========================================================
+   11) Responsive: Header (mobile)
+========================================================= */
 @media (max-width: 760px) {
   .nav {
     flex-wrap: wrap;
@@ -353,11 +198,11 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
     gap: .5rem;
   }
 
-  /* Tighten the brand so links have space */
-  .brand-title { display: none; }           /* hide the text label on mobile */
-  .brand img { height: 40px; }              /* slightly smaller logo */
+  /* Tighten brand on small screens */
+  .brand-title { display: none; }   /* hide text label to save space */
+  .brand img { height: 40px; width: auto; }
 
-  /* Nav links wrap below the brand */
+  /* Wrap links under the brand */
   .menu {
     width: 100%;
     display: flex;
@@ -369,15 +214,15 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
     padding: .5rem .65rem;
     font-size: .95rem;
     line-height: 1.2;
-    flex: 0 1 auto;                         /* wrap nicely */
-    order: 1;                               /* regular links first */
+    flex: 0 1 auto;   /* wrap nicely */
+    order: 1;         /* regular links first */
   }
 
-  /* Put CTAs on their own row, full width */
+  /* Put CTAs on their own full-width row */
   .menu .cta,
   .menu .cta.secondary {
     flex: 1 0 100%;
     text-align: center;
-    order: 2;                               /* CTAs after the links */
+    order: 2;
   }
 }
