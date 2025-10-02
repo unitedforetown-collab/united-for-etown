@@ -70,3 +70,160 @@ a:hover{text-decoration:underline}
 blockquote{margin:0;padding:.75rem 1rem;border-left:4px solid var(--accent);background:#fff8f2;border-radius:8px}
 ul.inline{list-style:none;padding:0;margin:0;display:flex;gap:.5rem;flex-wrap:wrap}
 ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6rem;border-radius:999px}
+
+/* Lock the header logo size */
+.header .brand img {
+  width: 48px;
+  height: auto;    /* preserves aspect */
+  max-width: none; /* ignore any global img rules */
+}
+
+/* Scope responsive images ONLY to hero & content, not header */
+.hero .hero-media img,
+.section img,
+.stat-band img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove the global version if you added it earlier */
+.img-fluid { /* optional: keep for specific images you tag */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Candidates page polish */
+.candidates .grid { gap: 2rem; }
+
+.candidates .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Candidate cards — square images */
+.candidates .card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* makes a perfect square */
+  object-fit: cover;      /* fills the square, crops evenly */
+  border-radius: .5rem;
+  display: block;
+}
+
+.candidates .card h2 { margin: .5rem 0 0; }
+.candidates .card .small { color: #555; margin-bottom: .5rem; }
+
+.candidates .card p { margin: .5rem 0; }
+
+/* push the button to the bottom so cards are equal height */
+.candidates .card a.btn { margin-top: auto; }
+
+/* Mobile: stack neatly */
+@media (max-width: 768px) {
+  .candidates .grid.cols-2 { grid-template-columns: 1fr !important; }
+}
+/* Candidate images — square format across site */
+.candidates .card img,
+.corty .profile img,
+.kevin .profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* force square */
+  object-fit: cover;      /* center crop */
+  border-radius: .5rem;
+  display: block;
+}
+/* Profile page layout: smaller image column */
+.corty .grid.cols-2,
+.kevin .grid.cols-2 {
+  grid-template-columns: 280px 1fr;   /* narrow left, roomy right */
+  align-items: start;
+  gap: 2rem;
+}
+
+/* Cap the image box */
+.corty .profile,
+.kevin .profile {
+  max-width: 280px;
+}
+
+/* Square, cropped, tidy */
+.corty .profile img,
+.kevin .profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* Mobile: stack and center the image */
+@media (max-width: 768px) {
+  .corty .grid.cols-2,
+  .kevin .grid.cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .corty .profile,
+  .kevin .profile {
+    margin: 0 auto 1rem;
+  }
+}
+/* Corty profile page polish */
+.corty .grid.cols-2 {
+  grid-template-columns: 280px 1fr;  /* narrow image, wide text */
+  align-items: start;
+  gap: 2rem;
+}
+
+.corty .profile {
+  max-width: 280px;
+}
+
+.corty .profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square crop */
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* On small screens, stack image above text */
+@media (max-width: 768px) {
+  .corty .grid.cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .corty .profile {
+    margin: 0 auto 1rem;
+  }
+}
+/* Kevin profile page polish */
+.kevin .grid.cols-2 {
+  grid-template-columns: 280px 1fr;  /* narrow image column */
+  align-items: start;
+  gap: 2rem;
+}
+
+.kevin .profile {
+  max-width: 280px;
+}
+
+.kevin .profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square crop */
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* On small screens, stack and center */
+@media (max-width: 768px) {
+  .kevin .grid.cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .kevin .profile {
+    margin: 0 auto 1rem;
+  }
+}
+/* Shift focal point up a bit */
+.corty .profile img { object-position: 50% 20%; }  /* 20% from top */
+.kevin .profile img { object-position: 50% 20%; }
