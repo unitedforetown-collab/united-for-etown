@@ -44,6 +44,7 @@ ul.inline li{ background:var(--bg-alt); border:1px solid #e5e7eb; padding:.35rem
 ========================================================= */
 .header{ position:sticky; top:0; z-index:30; background:#fff; border-bottom:1px solid #e5e7eb; }
 .nav{ display:flex; align-items:center; gap:1rem; justify-content:space-between; padding:.75rem 0; }
+
 .brand{ display:flex; align-items:center; gap:.75rem; }
 .brand img{ height:44px; width:auto; }
 /* Lock header logo size */
@@ -59,6 +60,9 @@ ul.inline li{ background:var(--bg-alt); border:1px solid #e5e7eb; padding:.35rem
 /* =========================================================
    4) Hero
 ========================================================= */
+/* Fallback for older browsers */
+.hero{ background: linear-gradient(135deg, #f1f3ff, #fff); }
+/* Preferred background */
 .hero{
   background:linear-gradient(135deg, color-mix(in oklab, var(--primary) 18%, #fff), #fff);
   padding:3.5rem 0 2.5rem;
@@ -186,45 +190,70 @@ ul.inline li{ background:var(--bg-alt); border:1px solid #e5e7eb; padding:.35rem
 }
 
 /* =========================================================
-   10) Responsive (global)
+   10) Forms
 ========================================================= */
+label{ font-weight:600; font-size:.95rem; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"],
+textarea, select{
+  width:100%;
+  padding:.6rem .7rem;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  font:inherit;
+  background:#fff;
+}
+textarea{ resize:vertical; }
+input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:2px solid var(--primary);
+  outline-offset:2px;
+  border-color:var(--primary);
+}
+fieldset{ border:1px solid #e5e7eb; border-radius:8px; padding:.75rem; }
+legend{ padding:0 .25rem; }
+
 /* =========================================================
    11) Responsive: Header (mobile)
 ========================================================= */
-@media (max-width: 760px) {
-  .nav {
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: .5rem;
+@media (max-width:760px){
+  .nav{
+    flex-wrap:wrap;
+    align-items:flex-start;
+    gap:.5rem;
   }
-
   /* Tighten brand on small screens */
-  .brand-title { display: none; }   /* hide text label to save space */
-  .brand img { height: 40px; width: auto; }
-
+  .brand-title{ display:none; }
+  .brand img{ height:40px; width:auto; }
   /* Wrap links under the brand */
-  .menu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
+  .menu{
+    width:100%;
+    display:flex; flex-wrap:wrap; gap:.5rem;
   }
-
-  .menu a {
-    padding: .5rem .65rem;
-    font-size: .95rem;
-    line-height: 1.2;
-    flex: 0 1 auto;   /* wrap nicely */
-    order: 1;         /* regular links first */
+  .menu a{
+    padding:.5rem .65rem;
+    font-size:.95rem;
+    line-height:1.2;
+    flex:0 1 auto;  /* wrap nicely */
+    order:1;        /* regular links first */
   }
-
   /* Put CTAs on their own full-width row */
   .menu .cta,
-  .menu .cta.secondary {
-    flex: 1 0 100%;
-    text-align: center;
-    order: 2;
+  .menu .cta.secondary{
+    flex:1 0 100%;
+    text-align:center;
+    order:2;
   }
 }
-html { scroll-behavior: smooth; }
-#by-mail { scroll-margin-top: 90px; } /* adjust if your header height changes */
+
+/* =========================================================
+   12) Responsive (global)
+========================================================= */
+@media (max-width:900px){
+  .grid.cols-3, .grid.cols-2{ grid-template-columns:1fr; }
+}
+
+/* =========================================================
+   13) Scroll behavior (global)
+   Makes all in-page anchors account for the sticky header.
+========================================================= */
+html{ scroll-behavior: smooth; }
+:target{ scroll-margin-top: 90px; } /* tweak if header height changes */
