@@ -229,3 +229,116 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
 
 /* Candidates index: shift focal point up so heads aren't clipped */
 .candidates .card img { object-position: 50% 10%; }  /* try 10%; test 5–15% */
+
+/* About page polish (scoped) */
+.about .about-aside ul { margin: .5rem 0 0; padding-left: 1.2rem; }
+.about .about-chips { list-style: none; padding: 0; display: flex; gap: .5rem; flex-wrap: wrap; margin: .5rem 0 0; }
+.about .about-chips li { background: var(--bg-alt); border: 1px solid #e5e7eb; padding: .35rem .6rem; border-radius: 999px; }
+.about details { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: .6rem .8rem; margin: .5rem 0; }
+.about details summary { cursor: pointer; font-weight: 600; }
+
+.endorsement-name {
+  display: inline-block;
+  padding: .75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  background: var(--bg-alt);
+  font-weight: 600;
+}
+/* Endorsements logo layout */
+.endorsement-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center even if 1–2 logos */
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.endorsement img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);  /* optional neutral look */
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.endorsement img:hover {
+  filter: none;
+  opacity: 1;
+}
+/* ---- NAV active link (optional, subtle) --------------------- */
+.menu a[aria-current="page"] { text-decoration: underline; }
+
+/* ---- Subpage hero tweak (prevents "double bar") ------------- */
+.hero--sub { border-bottom: 0; padding-top: 2.5rem; }
+
+/* ---- Candidate profile layout (single source of truth) ------ */
+.corty .grid.cols-2,
+.kevin .grid.cols-2 {
+  grid-template-columns: 280px 1fr;
+  align-items: start;
+  gap: 2rem;
+}
+.corty .profile,
+.kevin .profile { max-width: 280px; }
+
+.corty .profile img,
+.kevin .profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* Fine-tune headroom per person (adjust if you re-crop later) */
+.corty .profile img { object-position: 50% 8%; }
+.kevin .profile img { object-position: 50% 8%; }
+
+/* Mobile stack */
+@media (max-width: 768px) {
+  .corty .grid.cols-2,
+  .kevin .grid.cols-2 { grid-template-columns: 1fr !important; }
+  .corty .profile,
+  .kevin .profile { margin: 0 auto 1rem; }
+}
+
+/* ---- Candidates index images (square + headroom) ------------ */
+.candidates .card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 10%;
+  border-radius: .5rem;
+  display: block;
+}
+
+/* ---- Endorsements (flex, centers with 1–2 logos) ------------ */
+.endorsement-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.endorsement img {
+  max-width: 140px;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+.endorsement img:hover { filter: none; opacity: 1; }
+
+/* Optional text fallback when no logo file yet */
+.endorsement-name {
+  display: inline-block;
+  padding: .75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  background: var(--bg-alt);
+  font-weight: 600;
+}
+
