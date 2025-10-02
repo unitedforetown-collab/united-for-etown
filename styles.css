@@ -295,3 +295,12 @@ legend{ padding:0 .25rem; }
 ========================================================= */
 html{ scroll-behavior: smooth; }
 :target{ scroll-margin-top: 90px; } /* tweak if header height changes */
+.mayor .hero-media img { border-radius: .5rem; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 12%; }
+
+/* Endorsement captions */
+.endorsement figcaption{
+  text-align:center;
+  font-size:.85rem;
+  color:var(--muted);
+  margin-top:.35rem;
+}

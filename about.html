@@ -7,146 +7,161 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="about">
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="United for E-Town logo" width="48" height="48">
-      <span class="brand-title">United for E-Town</span>
-    </a>
-    <nav class="menu" aria-label="Primary">
-      <a href="about.html" aria-current="page">About</a>
-      <a href="mayor.html">Mayor 2025</a>
-      <a href="candidates.html">Candidates</a>
-      <a href="issues.html">Issues &amp; Advocacy</a>
-      <a href="events.html">Events</a>
-      <a href="news.html">News</a>
-      <a class="cta" href="get-involved.html">Get Involved</a>
-      <a class="cta secondary" href="donate.html">Donate</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="United for E-Town logo" width="48" height="48">
+        <span class="brand-title">United for E-Town</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="about.html" aria-current="page">About</a>
+        <a href="mayor.html">Mayor 2025</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="issues.html">Issues &amp; Advocacy</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a class="cta" href="get-involved.html">Get Involved</a>
+        <a class="cta secondary" href="donate.html">Donate</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero hero--sub">
-  <div class="container">
-    <div class="grid cols-2" style="align-items:center">
-      <div>
-        <div class="badge">United for E-Town</div>
-        <h1>About United for E-Town</h1>
-        <p>Neighbors first. Politics second. Progress always.</p>
-        <div class="actions">
-          <a class="btn primary" href="get-involved.html">Join us!</a>
-          <a class="btn accent" href="mayor.html">Jamie for Mayor 2025</a>
-          <a class="btn ghost" href="issues.html">Borough Candidates</a>
+  <!-- Hero -->
+  <section class="hero hero--sub">
+    <div class="container">
+      <div class="grid cols-2" style="align-items:center">
+        <div>
+          <div class="badge">United for E-Town</div>
+          <h1>About United for E-Town</h1>
+          <p class="lead">Neighbors working on the basics: strong schools, safer streets, and a healthy local economy.</p>
+          <div class="actions">
+            <a class="btn primary" href="get-involved.html">Get Involved</a>
+            <a class="btn accent" href="candidates.html">Meet the Candidates</a>
+            <a class="btn ghost" href="issues.html">See the Issues</a>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="true" style="justify-self:end;text-align:right">
+          <img src="assets/logo.png" alt="" width="180" height="180">
         </div>
       </div>
-      <div style="justify-self:end;text-align:right">
-        <img src="assets/logo.png" alt="United for E-Town logo">
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<main>
-  <!-- Mission -->
-  <section class="section" id="mission">
-    <div class="container grid cols-2" style="align-items:start; gap:2rem">
-      <div>
-        <h2>Our Mission</h2>
-        <p>Bring neighbors together to support strong schools, safer streets, and a healthy local economy in Elizabethtown. We work on practical steps that improve daily life and respect how people differ.</p>
+  <main>
+    <!-- Mission -->
+    <section class="section" id="mission">
+      <div class="container grid cols-2" style="align-items:start; gap:2rem">
+        <div>
+          <h2>Our Mission</h2>
+          <p>Bring neighbors together to back strong schools, safer streets, and a vibrant downtown. We focus on practical steps, clear communication, and respect across differences.</p>
+        </div>
+        <aside class="about-aside card">
+          <h3 style="margin-top:0">Quick facts</h3>
+          <ul>
+            <li>Volunteer-led</li>
+            <li>Focus: schools · safety · small business</li>
+            <li>Open meetings; clear updates</li>
+          </ul>
+        </aside>
       </div>
-      <aside class="about-aside card">
-        <h3 style="margin-top:0">Quick facts</h3>
-        <ul>
-          <li>Non-partisan local coalition</li>
-          <li>Volunteer-led</li>
-          <li>Focus: schools · safety · small business</li>
+    </section>
+
+    <!-- Values -->
+    <section class="section" id="values">
+      <div class="container">
+        <h2>Our Values</h2>
+        <ul class="about-chips">
+          <li>Respect for every neighbor</li>
+          <li>Transparent communication</li>
+          <li>Data-informed decisions</li>
+          <li>Fiscal responsibility</li>
+          <li>Service over headlines</li>
         </ul>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section class="section" id="values">
-    <div class="container">
-      <h2>Our Values</h2>
-      <ul class="about-chips">
-        <li>Respect for every neighbor</li>
-        <li>Transparent communication</li>
-        <li>Data-informed decisions</li>
-        <li>Fiscal responsibility</li>
-        <li>Service over headlines</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- What we do -->
-  <section class="section" id="work">
-    <div class="container grid cols-3">
-      <article class="card">
-        <h3>Schools</h3>
-        <p>Share clear funding info, support safe facilities, and expand youth mental health resources.</p>
-        <a class="btn ghost" href="issues.html#schools">See school priorities →</a>
-      </article>
-      <article class="card">
-        <h3>Neighborhood Safety</h3>
-        <p>Push for traffic calming, safe crossings, and lighting near schools and parks.</p>
-        <a class="btn ghost" href="issues.html#safety">See safety plan →</a>
-      </article>
-      <article class="card">
-        <h3>Local Economy</h3>
-        <p>Back small business with simpler permitting and downtown activation.</p>
-        <a class="btn ghost" href="issues.html#economy">See economy plan →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Leadership (Jamie) -->
-  <section class="section" id="leadership">
-    <div class="container grid cols-2" style="align-items:start; gap:2rem">
-      <div>
-        <img src="assets/jamie.jpg" alt="Jamie Fickes" class="img-fluid" loading="lazy">
       </div>
-      <div>
-        <h2>Leadership</h2>
-        <h3 style="margin:.25rem 0 0">Jamie Fickes</h3>
-        <p class="small">Candidate for Mayor · Community volunteer · Scout leader · Project manager</p>
-        <p>Jamie has spent years organizing local service projects and mentoring youth. He believes strong schools, safe neighborhoods, and small business growth move together — and that town hall should work like a good project: clear goals, tight budgets, and steady follow-through.</p>
-        <div class="actions" style="margin-top:.5rem">
-          <a class="btn accent" href="mayor.html">Jamie for Mayor 2025</a>
-          <a class="btn ghost" href="candidates.html">Meet our candidates</a>
+    </section>
+
+    <!-- What we do -->
+    <section class="section" id="work">
+      <div class="container grid cols-3">
+        <article class="card">
+          <h3>Schools</h3>
+          <p>Share clear funding info, support safe facilities, and expand youth mental-health resources.</p>
+          <a class="btn ghost" href="issues.html#schools">School priorities →</a>
+        </article>
+        <article class="card">
+          <h3>Neighborhood Safety</h3>
+          <p>Push for traffic calming, safe crossings, and lighting near schools and parks.</p>
+          <a class="btn ghost" href="issues.html#safety">Safety plan →</a>
+        </article>
+        <article class="card">
+          <h3>Local Economy</h3>
+          <p>Simpler permitting, storefront activation, and a school-to-work pipeline.</p>
+          <a class="btn ghost" href="issues.html#economy">Economy plan →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team: all candidates -->
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Who we are</h2>
+        <div class="grid cols-3">
+          <!-- Jamie -->
+          <article class="card">
+            <img src="assets/jamie.jpg" alt="Jamie Fickes" class="img-fluid">
+            <h3 style="margin:.5rem 0 0">Jamie Fickes</h3>
+            <p class="small">Candidate for Mayor</p>
+            <p>Community volunteer and project manager. Focused on clear goals, tight budgets, and steady follow-through.</p>
+            <a class="btn ghost" href="mayor.html">Jamie for Mayor 2025</a>
+          </article>
+
+          <!-- Corty -->
+          <article class="card">
+            <img src="assets/corty.jpg" alt="Corty Byron" class="img-fluid">
+            <h3 style="margin:.5rem 0 0">Corty Byron</h3>
+            <p class="small">Borough Council — Ward 2</p>
+            <p>Longtime resident and musician. Inspired by his family’s service, he aims to build harmony even when voices differ.</p>
+            <a class="btn ghost" href="corty-byron.html">Read Corty’s page</a>
+          </article>
+
+          <!-- Kevin -->
+          <article class="card">
+            <img src="assets/kevin.jpg" alt="Kevin Karr" class="img-fluid">
+            <h3 style="margin:.5rem 0 0">Kevin Karr</h3>
+            <p class="small">Judge of Elections</p>
+            <p>Culinary-school trained; years in the service industry. A Scout leader who brings fairness, calm, and good records.</p>
+            <a class="btn ghost" href="kevin-karr.html">Read Kevin’s page</a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <h2>FAQ</h2>
-      <details>
-        <summary>Is United for E-Town partisan?</summary>
-        <p>No. We’re a local coalition focused on practical fixes that help families and small businesses.</p>
-      </details>
-      <details>
-        <summary>How can I get involved?</summary>
-        <p>Start with a small step: sign up to canvass a block, share a post, or help at an event.</p>
-      </details>
-      <details>
-        <summary>Where does my donation go?</summary>
-        <p>Outreach materials, community events, and tools that help neighbors connect and take action.</p>
-      </details>
-      <details>
-        <summary>Do you meet in person?</summary>
-        <p>Yes. Check the Events page for upcoming gatherings and town-hall style conversations.</p>
-      </details>
-      <div class="actions" style="margin-top:1rem">    <a class="btn primary" href="get-involved.html">Join Us</a>
-        <a class="btn ghost" href="events.html">See Events</a>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>How can you get involved?</summary>
+          <p>Start small: canvass a block, share a post, help at an event, or host a conversation.</p>
+        </details>
+        <details>
+          <summary>What do donations support?</summary>
+          <p>Outreach materials, community events, and tools that help neighbors connect and act.</p>
+        </details>
+        <details>
+          <summary>Do you meet in person?</summary>
+          <p>Yes. Check the Events page for gatherings and town-hall style conversations.</p>
+        </details>
+        <div class="actions" style="margin-top:1rem">
+          <a class="btn primary" href="get-involved.html">Get Involved</a>
+          <a class="btn ghost" href="events.html">See Events</a>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="grid cols-3">
@@ -154,9 +169,10 @@
           <strong>United for E-Town</strong><br>
           <span class="small">A community movement for strong schools, safe streets, and a shared future.</span>
         </div>
-		<div>
-		  <div class="small">Contact: <a href="mailto:unitedforetown@gmail.com">unitedforetown@gmail.com</a></div>		  <div class="small">Facebook: <a href="https://www.facebook.com/profile.php?id=61574407626864">UnitedForETown</a></div>
-		</div>
+        <div>
+          <div class="small">Contact: <a href="mailto:unitedforetown@gmail.com">unitedforetown@gmail.com</a></div>
+          <div class="small">Facebook: <a href="https://www.facebook.com/profile.php?id=61574407626864">UnitedForETown</a></div>
+        </div>
         <div class="small">Paid for by United for E-Town. © 2025.</div>
       </div>
     </div>
