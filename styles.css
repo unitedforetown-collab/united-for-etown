@@ -226,3 +226,5 @@ ul.inline li{ background:var(--bg-alt); border:1px solid #e5e7eb; padding:.35rem
     order: 2;
   }
 }
+html { scroll-behavior: smooth; }
+#by-mail { scroll-margin-top: 90px; } /* adjust if your header height changes */
