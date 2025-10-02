@@ -1,77 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donate — United for E‑Town</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate — United for E-Town</title>
+
+  <meta name="description" content="Donate to support strong schools, safer streets, and a vibrant downtown in Elizabethtown.">
+  <link rel="canonical" href="https://unitedforetown.com/donate.html">
+
+  <meta property="og:title" content="Donate — United for E-Town">
+  <meta property="og:description" content="Support community-led work in E-Town.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unitedforetown.com/donate.html">
+  <meta property="og:image" content="https://unitedforetown.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="United for E-Town logo" width="48" height="48">
-      <span class="brand-title">United for E-Town</span>
-    </a>
-    <nav class="menu" aria-label="Primary">
-      <a href="about.html">About</a>
-      <a href="mayor.html">Mayor 2025</a>
-      <a href="candidates.html">Candidates</a>
-      <a href="issues.html">Issues &amp; Advocacy</a>
-      <a href="events.html">Events</a>
-      <a href="news.html">News</a>
-      <a class="cta" href="get-involved.html">Get Involved</a>
-      <a class="cta secondary" href="donate.html">Donate</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="United for E-Town logo" width="48" height="48">
+        <span class="brand-title">United for E-Town</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="about.html">About</a>
+        <a href="mayor.html">Mayor 2025</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="issues.html">Issues &amp; Advocacy</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a class="cta" href="get-involved.html">Get Involved</a>
+        <a class="cta secondary" href="donate.html" aria-current="page">Donate</a>
+      </nav>
+    </div>
+  </header>
 
-    
-
-        <section class="hero">
-          <div class="container">
-            <div class="grid cols-2" style="align-items:center">
-              <div>
-                <div class="badge">United for E‑Town</div>
-                <h1>Chip in to support the work</h1>
-                <p>Every bit helps us reach more neighbors.</p>
-                <div class="actions">
-                  <a class="btn primary" href="get-involved.html">Join the Coalition</a>
-                  <a class="btn accent" href="mayor.html">Jamie for Mayor 2025</a>
-                  <a class="btn ghost" href="issues.html">See the Issues</a>
-                </div>
-              </div>
-              <div style="justify-self:end;text-align:right">
-                <img src="assets/logo.png" alt="United for E-Town logo" />
-              </div>
-            </div>
-          </div>
-        </section>
-        
-<main>
-<section class="section container">
-  <h2>Donate</h2>
-  <p>Your support powers outreach, materials, and events. Embed ActBlue/Stripe here.</p>
-  <div class="card" style="text-align:center">
-    <em>Donation widget embed placeholder</em>
-  </div>
-</section>
-</main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="grid cols-3">
-          <div>
-            <strong>United for E‑Town</strong><br>
-            <span class="small">A community movement for strong schools, safe streets, and a shared future.</span>
-          </div>
-		<div>
-		  <div class="small">Contact: <a href="mailto:unitedforetown@gmail.com">unitedforetown@gmail.com</a></div>		  <div class="small">Facebook: <a href="https://www.facebook.com/profile.php?id=61574407626864">UnitedForETown</a></div>
-		</div>
-          <div class="small">Paid for by United for E‑Town. © 2025.</div>
+  <!-- Hero -->
+  <section class="hero hero--sub">
+    <div class="container">
+      <div class="grid cols-2" style="align-items:center">
+        <div>
+          <div class="badge">United for E-Town</div>
+          <h1>Donate</h1>
+          <p class="lead">Help us print materials, run outreach, and host community events in Elizabethtown.</p>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/logo.png" alt="" width="180" height="180">
         </div>
       </div>
-    </footer>
-    
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container grid cols-2" style="align-items:start; gap:2rem">
+        <!-- Online -->
+        <article class="card">
+          <h2 style="margin-top:0">Donate Online</h2>
+          <p>Give securely using our ActBlue page.</p>
+          <div class="actions" style="margin-top:.5rem">
+            <a class="btn primary" href="https://secure.actblue.com/donate/united-for-etown-1" target="_blank" rel="noopener">Donate via ActBlue</a>
+            <a class="btn ghost" href="#by-mail">Donate by mail</a>
+          </div>
+          <p class="small" style="margin-top:.5rem;color:#6b7280">You’ll be taken to a secure ActBlue page to complete your donation.</p>
+        </article>
+
+        <!-- By mail -->
+        <article class="card" id="by-mail">
+          <h2 style="margin-top:0">Donate by Mail</h2>
+          <p>Prefer a check? Please make it payable to:</p>
+          <!-- TODO: replace with your real payee and address -->
+          <address style="font-style:normal; line-height:1.5">
+United for E-Town<br>
+15 Cottage Aveue
+          </address>
+          <address style="font-style:normal; line-height:1.5">
+          &nbsp;lizabethtown, PA 17022
+          </address>
+<p class="small" style="color:#6b7280">Include your email to receive a receipt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3 style="margin-top:0">Notes</h3>
+        <ul>
+          <li>Contributions support community outreach and local organizing.</li>
+          <li>Questions? <a href="mailto:unitedforetown@gmail.com">unitedforetown@gmail.com</a></li>
+          <!-- TODO: Add any required compliance text here once confirmed. -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid cols-3">
+        <div>
+          <strong>United for E-Town</strong><br>
+          <span class="small">A community movement for strong schools, safe streets, and a shared future.</span>
+        </div>
+        <div>
+          <div class="small">Contact: <a href="mailto:unitedforetown@gmail.com">unitedforetown@gmail.com</a></div>
+          <div class="small">Facebook: <a href="https://www.facebook.com/profile.php?id=61574407626864">UnitedForETown</a></div>
+        </div>
+        <div class="small">Paid for by United for E-Town. © 2025.</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
