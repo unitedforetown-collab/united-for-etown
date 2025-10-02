@@ -227,3 +227,6 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
 /* Shift focal point up a bit */
 .corty .profile img { object-position: 50% 20%; }  /* 20% from top */
 .kevin .profile img { object-position: 50% 20%; }
+/* Shift focal point further up */
+.corty .profile img { object-position: 50% 8%; }   /* try 8% */
+.kevin .profile img { object-position: 50% 8%; }
