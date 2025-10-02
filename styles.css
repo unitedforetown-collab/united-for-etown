@@ -344,3 +344,40 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
 
 .lead { font-size: 1.125rem; color: var(--muted); }
 .menu a[aria-current="page"] { text-decoration: underline; }
+
+/* Mobile header: stack nav neatly */
+@media (max-width: 760px) {
+  .nav {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
+  /* Tighten the brand so links have space */
+  .brand-title { display: none; }           /* hide the text label on mobile */
+  .brand img { height: 40px; }              /* slightly smaller logo */
+
+  /* Nav links wrap below the brand */
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .menu a {
+    padding: .5rem .65rem;
+    font-size: .95rem;
+    line-height: 1.2;
+    flex: 0 1 auto;                         /* wrap nicely */
+    order: 1;                               /* regular links first */
+  }
+
+  /* Put CTAs on their own row, full width */
+  .menu .cta,
+  .menu .cta.secondary {
+    flex: 1 0 100%;
+    text-align: center;
+    order: 2;                               /* CTAs after the links */
+  }
+}
