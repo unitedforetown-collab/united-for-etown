@@ -224,12 +224,8 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
     margin: 0 auto 1rem;
   }
 }
-/* Shift focal point up a bit */
-.corty .profile img { object-position: 50% 20%; }  /* 20% from top */
-.kevin .profile img { object-position: 50% 20%; }
-/* Shift focal point further up */
 .corty .profile img { object-position: 50% 8%; }   /* try 8% */
-.kevin .profile img { object-position: 50% 8%; }
+.kevin .profile img { object-position: 50% 20%; }
 
 /* Candidates index: shift focal point up so heads aren't clipped */
 .candidates .card img { object-position: 50% 10%; }  /* try 10%; test 5–15% */
