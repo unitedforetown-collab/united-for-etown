@@ -342,3 +342,5 @@ ul.inline li{background:var(--bg-alt);border:1px solid #e5e7eb;padding:.35rem .6
   font-weight: 600;
 }
 
+.lead { font-size: 1.125rem; color: var(--muted); }
+.menu a[aria-current="page"] { text-decoration: underline; }
